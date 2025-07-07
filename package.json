@@ -25,12 +25,12 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rydnr/typescript-eda-domain.git"
+    "url": "https://github.com/typescript-eda/domain.git"
   },
   "bugs": {
-    "url": "https://github.com/rydnr/typescript-eda-domain/issues"
+    "url": "https://github.com/typescript-eda/domain/issues"
   },
-  "homepage": "https://typescript-eda.org/domain",
+  "homepage": "https://github.com/typescript-eda/domain",
   "dependencies": {
     "reflect-metadata": "^0.2.2"
   },
