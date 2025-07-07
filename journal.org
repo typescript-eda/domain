@@ -1,0 +1,68 @@
+#+TITLE: TypeScript-EDA Domain - Development Journal
+#+AUTHOR: TypeScript-EDA Team
+#+DATE: [2024-01-07]
+
+* Overview
+
+This repository contains the core domain primitives for the TypeScript-EDA event-driven architecture framework. It provides the foundational building blocks: Entity, Event, and ValueObject base classes.
+
+* Repository History
+
+** Monorepo Separation (2024-01-07)
+
+This repository was extracted from the original chatgpt-buddy monorepo as part of Phase 8A of the Semantest platform evolution. The separation preserves the complete git history of the typescript-eda-domain directory.
+
+*** Key Changes
+- Extracted from =typescript-eda-domain/= directory in the monorepo
+- Now published as =@typescript-eda/domain= on npm
+- Repository URL: https://github.com/typescript-eda/domain
+- Part of the typescript-eda organization
+
+*** Post-Separation Setup Required
+1. Update package.json dependencies from workspace references to npm packages
+2. Set up GitHub Actions CI/CD workflow
+3. Configure npm publishing with NPM_TOKEN secret
+4. Update README with proper documentation
+
+** Original Development
+
+The domain package was initially developed as part of the chatgpt-buddy project to provide a solid foundation for event-driven architecture in TypeScript. It implements Domain-Driven Design principles with:
+
+- Base =Entity= class with identity management
+- Base =Event= class for domain events
+- Base =ValueObject= class for immutable values
+- TypeScript decorators for metadata
+- Strong typing throughout
+
+* Technical Architecture
+
+** Core Classes
+
+*** Entity
+Base class for all domain entities with:
+- Unique identifier management
+- Equality comparison based on ID
+- Lifecycle hooks
+- Event emission capabilities
+
+*** Event
+Base class for domain events with:
+- Event type identification
+- Timestamp tracking
+- Aggregate ID reference
+- Event versioning support
+
+*** ValueObject
+Base class for value objects with:
+- Immutability enforcement
+- Structural equality comparison
+- Validation hooks
+- Serialization support
+
+* Future Roadmap
+
+- Add event sourcing utilities
+- Implement aggregate root base class
+- Add domain service patterns
+- Create testing utilities
+- Improve documentation and examples
