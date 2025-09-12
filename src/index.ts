@@ -16,9 +16,8 @@ export { Ports } from './domain/ports';
 // Decorators for domain behavior
 export { listen } from './domain/listen.decorator';
 
-// Type definitions
-export type { EntityId } from './domain/entity';
-export type { EventMetadata } from './domain/event';
+// Re-export all from domain/index.ts to avoid duplicate exports
+export * from './domain/index';
 
 // Version information
 export const VERSION = '1.0.0';

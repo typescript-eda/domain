@@ -18,6 +18,7 @@
  * @module domain/listen.decorator
  */
 
+import 'reflect-metadata';
 import { Event } from './event';
 
 /**
@@ -26,7 +27,7 @@ import { Event } from './event';
  * @returns {MethodDecorator} The method decorator.
  */
 export function listen(event: Event): MethodDecorator {
-  return (target: unknown, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
+  return (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
     if (!Reflect.hasMetadata('listeners', target.constructor)) {
       Reflect.defineMetadata('listeners', [], target.constructor);
     }

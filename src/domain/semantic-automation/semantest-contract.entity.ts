@@ -382,7 +382,7 @@ export class SemanTestContract extends Entity<SemanTestContractProps> {
           warnings.push(`Capability '${name}': ${capabilityValidation.warnings.join(', ')}`);
         }
       } catch (error) {
-        errors.push(`Capability '${name}': ${error.message}`);
+        errors.push(`Capability '${name}': ${error instanceof Error ? error.message : String(error)}`);
       }
     }
 

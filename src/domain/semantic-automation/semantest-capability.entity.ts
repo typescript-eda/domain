@@ -19,7 +19,7 @@
  */
 
 import { Entity } from '../entity';
-import { ParameterDefinition, ParameterType } from './semantest-contract.entity';
+import { ParameterDefinition, ParameterType, ConditionType, ExecutionCondition } from './semantest-contract.entity';
 
 /**
  * Properties for SemanTestCapability entity
@@ -93,22 +93,6 @@ export interface WaitCondition {
  */
 export type WaitType = 'visible' | 'present' | 'hidden' | 'enabled' | 'text' | 'custom';
 
-/**
- * Execution conditions
- */
-export interface ExecutionCondition {
-  readonly type: ConditionType;
-  readonly selector?: string;
-  readonly urlPattern?: string;
-  readonly text?: string;
-  readonly customCondition?: string;
-  readonly negate?: boolean;
-}
-
-/**
- * Condition types
- */
-export type ConditionType = 'element' | 'url' | 'text' | 'custom';
 
 /**
  * Capability examples
